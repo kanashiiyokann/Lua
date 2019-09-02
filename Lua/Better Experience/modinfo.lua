@@ -1,8 +1,8 @@
 
 -- This information tells other players more about the mod
 name = "Better Experience"
-description = ""
-author = " "
+description = "All For Better Experience."
+author = "yayi"
 version = "1.0.0"
 
 -- This is the URL name of the mod's thread on the forum; the part after the ? and before the first & in the url
@@ -22,7 +22,7 @@ configuration_options={
     {
         name = "teeth_trap_stackable",
         label = "狗牙陷阱可堆叠",
-     --   hover = "狗牙陷阱可堆叠",
+        --   hover = "狗牙陷阱可堆叠",
         options =
         {
             {description="否", data = 0},
