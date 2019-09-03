@@ -1,8 +1,6 @@
---
--- Created by IntelliJ IDEA.
--- User: DGG-S27-D-20
--- Date: 2019/8/28
--- Time: 17:23
--- To change this template use File | Settings | File Templates.
---
+print('hello')
 
+local table={3,2,1,option={name="age",value=18}}
+
+print(table[1])
+print(table["option"]["name"])
