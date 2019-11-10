@@ -1,6 +1,7 @@
 
 local modfunction={};
 
+if TUNING==nil then TUNING={} end;
 --最大化(99)物品堆叠大小
 ---maxStackableSize
 ---@param size number 物品堆叠大小
@@ -22,4 +23,4 @@ function modfunction:trapTeethStackable ()
     end)
 end
 
-return modfunction;
+return modfunction ;

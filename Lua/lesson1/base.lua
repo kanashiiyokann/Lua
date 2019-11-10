@@ -6,5 +6,10 @@ function base:say(a,b,c)
     print(self)
 end
 
+local advance={};
 
-return base;
+function advance:say2()
+    print("advance hello!")
+end
+
+return base,advance;

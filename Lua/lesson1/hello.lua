@@ -1,3 +1,3 @@
-local base=require("base");
+local base,advance=require("base");
 
-base:say("fuck you ")
+print(base,advance)
