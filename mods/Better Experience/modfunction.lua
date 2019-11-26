@@ -22,18 +22,14 @@ function modfunction:trapTeethStackable ()
         inst.components.stackable.maxsize = TUNING.STACK_SIZE_MEDITEM;
     end);
 end
----狗牙自动重置
+---狗牙陷阱自动重置
 function modfunction:trapAutoReset()
     AddPrefabPostInit("trap_teeth", function(inst)
-        local proxy_onhaunt = inst.components.hauntable.onunhaunt;
-        if (proxy_onhaunt ~= nil) then
-            inst.components.hauntable.onunhaunt = function(inst, haunter)
-                proxy_onhaunt(inst, haunter);
-                inst:DoTaskInTime(60, function()
-                    if (inst.components.mine ~= nil) then
-                        inst.components.mine.Reset();
-                    end
-                end);
+        local proxy_onexplode = inst.components.mine.onexplode;
+        if (proxy_onexplode ~= nil) then
+            inst.components.mine.onexplode = function(inst, target)
+                proxy_onexplode(inst, target);
+                inst:DoTaskInTime(10, inst.components.mine.Reset);
             end
         end
     end);
